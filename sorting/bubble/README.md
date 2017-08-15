@@ -9,16 +9,25 @@ top of the list. This algorithm is impractical for extremely large and
 terribly sorted collections. It; however, still can be used decently
 for nearly sorted arrays.
 
+The only significant advantage BubbleSort has over other algorithms, even
+including QuickSort, but not on InsertionSort, is its ability to detect
+whether or not a list is sorted efficiently. Also since the worst case
+space-complexity is O(1), it’s best and average are also O(1). For 
+this algorithm, space complexity stays the same.
+
 Usage
 ---
 _from within the java dir_
+
 `make [--silent] args=T`
 `make [--silent] clean`
 
+[//]: # (alternatively you can use these more cumbersome commands)
 `javac *.java`
 `java BubbleSort T`
 
 _from within the py dir_
+
 `python test.py`
 
 Where _T_ is an array of vals or a text file containing vals. Alternatively,
@@ -30,15 +39,11 @@ used to minimize Makefile output to be only what you allow.
 
 Example
 ---
-`make --silent args=../tests/case-1.txt`
+`make --silent args=../.tests/case-1.txt`
 
 Note
 ---
-The only significant advantage BubbleSort has over other algorithms, even
-including QuickSort, but not on InsertionSort, is its ability to detect
-whether or not a list is sorted efficiently. Also since the worst case
-space-complexity is O(1), it’s best and average are also O(1). For 
-this algorithm, space complexity stays the same.
+The testing folder is kept hidden as `./.tests` within this dir.
 
 Testing
 ---

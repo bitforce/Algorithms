@@ -1,11 +1,8 @@
 #=================================
-sources = $(wildcard *.java)
-classes = $(sources:.java=.class)
-main = Test
 run:
 	@echo 'compiling sources...'
-	javac $(sources)
-	java $(main) $(args)
+	javac $(wildcard *.java)
+	java Test $(args)
 clean: 
-	$(RM) $(classes) *.txt
+	$(RM) *.class *.txt
 #=================================
