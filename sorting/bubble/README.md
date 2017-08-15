@@ -18,16 +18,18 @@ this algorithm, space complexity stays the same.
 Usage
 ---
 _from within the java dir_
-
-`make [--silent] args=T`
-`make [--silent] clean`
+```
+make [--silent] args=T
+make [--silent] clean
+```
 
 [//]: # (alternatively you can use these more cumbersome commands)
-`javac *.java`
-`java BubbleSort T`
+```
+javac *.java
+java BubbleSort T 
+```
 
 _from within the py dir_
-
 `python test.py`
 
 Where _T_ is an array of vals or a text file containing vals. Alternatively,
