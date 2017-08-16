@@ -2,6 +2,8 @@ from bubble_sort import bubble_sort
 import sys
 
 
+# accept both numerical and [hidden] text file arguments
+# clean directory of compiled files
 def test():
     array = sys.argv[1:]
     if len(array) == 0:

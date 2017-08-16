@@ -15,6 +15,8 @@ whether or not a list is sorted efficiently. Also since the worst case
 space-complexity is O(1), it’s best and average are also O(1). For 
 this algorithm, space complexity stays the same.
 
+![alt-text][gif1]
+
 Usage
 ---
 _from within the java dir_
@@ -22,8 +24,7 @@ _from within the java dir_
 make [--silent] args=T
 make [--silent] clean
 ```
-
-[//]: # (alternatively you can use these more cumbersome commands)
+[//]: # (alternatively: use these more cumbersome commands below)
 ```
 javac *.java
 java BubbleSort T 
@@ -62,3 +63,14 @@ Performance
 ---
 * Time: Ω(n^2) | θ(n^2) | O(n)
 * Space: O(1)
+
+![alt-text][img1]
+![alt-text][gif2]
+
+###### Sources: [Wikipedia Commons](https://commons.wikimedia.org/wiki/Main_Page)
+
+--------------------------------------------------------------------------------
+
+[gif1]: https://upload.wikimedia.org/wikipedia/commons/5/54/Sorting_bubblesort_anim.gif
+[img1]: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bubblesort-edited-color.svg/288px-Bubblesort-edited-color.svg.png
+[gif2]: https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
