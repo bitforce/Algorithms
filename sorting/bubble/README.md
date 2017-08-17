@@ -15,23 +15,17 @@ whether or not a list is sorted efficiently. Also since the worst case
 space-complexity is O(1), it’s best and average are also O(1). For 
 this algorithm, space complexity stays the same.
 
-![alt-text][gif1]
+![][1]
 
 Usage
 ---
-_from within the java dir_
-```
-make [--silent] args=T
-make [--silent] clean
-```
-[//]: # (alternatively: use these more cumbersome commands below)
-```
-javac *.java
-java BubbleSort T 
-```
+`make [--silent] args=T`
+`make [--silent] clean`
 
-_from within the py dir_
-`python test.py`
+`javac *.java`
+`java BubbleSort T`
+
+`python test.py T`
 
 Where _T_ is an array of vals or a text file containing vals. Alternatively,
 use make _T_ to quickly recompile and run the Java Test classes with args 
@@ -40,9 +34,18 @@ files and spruce up the directory. Make sure that if using the former
 method, that _T_ is within quotations. The `--silent` option can be 
 used to minimize Makefile output to be only what you allow.
 
+_Note that `make` and `java[c]` commands occur within ./java dir and any 
+python commands occur within the ./py dir._
+
 Example
 ---
-`make --silent args=../.tests/case-1.txt`
+`make --silent args=../.tests/input.txt
+`make args='3 2 1'`
+`make clean`
+
+`python test.py ../.tests/.input.txt`
+`python test.py 3 2 1`
+`python clean`
 
 Note
 ---
@@ -64,13 +67,14 @@ Performance
 * Time: Ω(n^2) | θ(n^2) | O(n)
 * Space: O(1)
 
-![alt-text][img1]
-![alt-text][gif2]
+![][2]
+![][3]
 
 ###### Sources: [Wikipedia Commons](https://commons.wikimedia.org/wiki/Main_Page)
 
 --------------------------------------------------------------------------------
 
-[gif1]: https://upload.wikimedia.org/wikipedia/commons/5/54/Sorting_bubblesort_anim.gif
-[img1]: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bubblesort-edited-color.svg/288px-Bubblesort-edited-color.svg.png
-[gif2]: https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
+<!--- this is where the sources go -->
+[1]: ./.res/img3.gif
+[2]: ./.res/img1.png
+[3]: ./.res/img2.gif

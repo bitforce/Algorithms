@@ -1,21 +1,57 @@
-from bubble_sort import bubble_sort
+from bubblesort import bubble_sort
+import shutil
 import sys
+import os
 
 
-# accept both numerical and [hidden] text file arguments
-# clean directory of compiled files
 def test():
-    array = sys.argv[1:]
-    if len(array) == 0:
+    args = sys.argv[1:]
+    if len(args) == 0:
         sys.exit("\033[91mcommandline args required\033[0m")
-    elif len(array) == 1:
-        f = open(str.endswith(".txt", ".txt"))
-        print f
+    elif len(args) == 1:
+        if sys.argv[1] == 'clean':
+            clean()
+        else:
+            f = open(sys.argv[1], 'r')
+            numlist = []
+            for line in f:
+                for i in line.split():
+                    if i.isdigit():
+                        numlist.append(int(i))
+            write('original.txt', numlist)
+            bubble_sort(numlist)
+            write('modified.txt', numlist)
     else:
-        print array
-        bubble_sort(array)
-        print array
+        print args
+        bubble_sort(args)
+        print args
 
 
-if __name__ == "__main__":
+def write(fname, data):
+    with open(fname, 'w') as f:
+        for i in data:
+            f.write('%d ' % i)
+        f.write('\n')
+
+
+def clean():
+    print 'cleaning directory...'
+    try:
+        filelist = [f for f in os.listdir('.')
+                    if f.endswith('.pyc') or f.endswith('.txt')]
+        for f in filelist:
+            os.remove(f)
+    except(Exception):
+        print 'no bytecode or txt files to remove'
+    try:
+        shutil.rmtree('__pycache__')
+    except(Exception):
+        print 'no __pycache__ dir to remove'
+    try:
+        shutil.rmtree('.cache')
+    except(Exception):
+        print 'no .cache dir to remove'
+
+
+if __name__ == '__main__':
     test()
