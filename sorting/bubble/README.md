@@ -39,7 +39,7 @@ python commands occur within the ./py dir._
 
 Example
 ---
-`make --silent args=../.tests/input.txt
+`make --silent args=../.tests/input.txt`
 `make args='3 2 1'`
 `make clean`
 
