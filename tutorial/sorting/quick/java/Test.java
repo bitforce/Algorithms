@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-class Test extends HeapSort {
+class Test extends QuickSort {
     private static void write(String fname, int[] arr) {
         try {
             BufferedWriter writer = null;
@@ -39,17 +39,17 @@ class Test extends HeapSort {
             while(in.hasNext())
                 list.add(in.nextInt());
             int[] arraylist = array(list);
-            HeapSort sort = new HeapSort();
+            QuickSort sort = new QuickSort();
             write("original.txt", arraylist);
-            sort.heapSort(arraylist); 
+            sort.quickSort(arraylist, 0, arraylist.length-1); 
             write("modified.txt", arraylist);
         } else {
-            HeapSort sort = new HeapSort();
+            QuickSort sort = new QuickSort();
             int[] array = new int[args.length];
             for(int i = 0; i < array.length; i++)
                 array[i] = Integer.parseInt(args[i]);
             print(array);
-            sort.heapSort(array);
+            sort.quickSort(array, 0, array.length-1);
             print(array);
         }
     }

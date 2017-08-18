@@ -10,8 +10,20 @@ N/A
 ###### Mechanics
 N/A
 
-###### Comments
-N/A
+###### Code
+[A.1](): The `partition()` method takes the last element as the pivot and places the 
+pivot element at its correct position in the sorted array, and places elements 
+smaller than it to the left of it and all other elements to the right.
+[A.2](): Index variable `j` is set to the low element and traverses than array and 
+if the element at `j` is less than the pivot, then the current index `i` is 
+incremented and is swapped with `j` so that an order exists.
+[A.3](): ~
+[A.4](): ~
+
+[B.1](): A pivot index is created and set as the last element and a current 
+index is set to the first element.
+[B.2]():
+[B.3]():
 
 ![][1]
 
