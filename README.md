@@ -14,8 +14,7 @@ necessarily having to go through cumbersome code docs or
 obscure literature to implement, run, and study.
 
 ###### Structure 
----
-This project contains the following directories...
+This project contains the following directories in the follow formats...
 
 Usage
 ---
@@ -33,9 +32,16 @@ interpreter.
 ###### Example
 Assume you'd like to understand and see the original QuickSort algorithm in 
 action, and assuming you are in the project folder, you would simply go 
-into [./sorting/quick/standard]() and there you will find a README file 
-containing information about QuickSort and how to run it in all the 
-available languages.
+into ./sorting/quick/ and there you will find a README file containing
+information about QuickSort and how to run it in all the available 
+languages. Assuming you'd want to run it Java, you would then go 
+to the ./java subdirectory and run a test of sorts. Perhaps you 
+would like to see the default test; thus, you would run:
+`make args=../.tests/input.txt`
+`cat original.txt`
+`cat modified.txt`
+For large inputs, we test using text files and export both the original file 
+and the modified file so you can open it up and see the algorithm's effects.
 
 ###### Testing
 Values can either be tested manually through the internal source file via 
