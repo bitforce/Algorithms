@@ -2,34 +2,17 @@
 
 Overview
 ---
-Applications/Purpose
+Applications/purpose
 
 ###### Advantages
 N/A
 
 ###### Mechanics
-N/A
-
-###### Code
-[A.1](): The `partition()` method takes the last element as the pivot and places the 
-pivot element at its correct position in the sorted array, and places elements 
-smaller than it to the left of it and all other elements to the right.
-[A.2](): A pivot index is created and set as the last element and a current 
-index is created and set to the first element.
-[A.3](): Index variable `j` is set to the low element and traverses than array and 
-if the element at `j` is less than the pivot, then the current index `i` is 
-incremented and is swapped with `j` so that an order exists.
-[A.4](): The second swap functionality that switches the last and second to last 
-element.
-[A.5](): The `quickSort()` method is simply a recursive sorting method that takes 
-advantage of the `partition()` method using a conditional to check whether the 
-values of left (low) partition are actually smaller than the values of the 
-right (high) partition. These partitions get naturally put back together 
-the recursive returns.
-[A.6](): The parameters are check to see if the low variable is actually smaller 
-than the high variable, which if so, a partition is created using said variables 
-and two recursive sorts are called to then sort each partition into smaller 
-pieces and then sort those smaller partitions.
+QuickSort works by selecting an element--can be random; preferably as close to the
+middle as possible--to be the pivot element, such that all elements lesser than it 
+get swapped onto its left side and all elements grater get moved to the right of 
+it. Naturally as the algorithm walks through the array, this creates an inherent 
+divide
 
 ![][1]
 

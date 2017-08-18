@@ -41,7 +41,7 @@ class Test extends QuickSort {
             int[] arraylist = array(list);
             QuickSort sort = new QuickSort();
             write("original.txt", arraylist);
-            sort.quickSort(arraylist, 0, arraylist.length-1); 
+            sort.quicksort(arraylist); 
             write("modified.txt", arraylist);
         } else {
             QuickSort sort = new QuickSort();
@@ -49,7 +49,7 @@ class Test extends QuickSort {
             for(int i = 0; i < array.length; i++)
                 array[i] = Integer.parseInt(args[i]);
             print(array);
-            sort.quickSort(array, 0, array.length-1);
+            sort.quicksort(array);
             print(array);
         }
     }
