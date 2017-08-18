@@ -26,7 +26,6 @@ run it.
 
 Example
 ---
-<!--- update this -->
 Assume you'd like to understand and see the original QuickSort algorithm in 
 action, and assuming you are in the project folder, you would simply go 
 into [./sorting/quick/standard]() and there you will find a README file 
@@ -43,6 +42,9 @@ The testing folders are kept hidden as `.tests` within their respective
 algorithm directories--where the README is located. Resources used to 
 make the README and contribute to the program are kept in a hidden
 `.res` folder. 
+
+Unlike the java directory `make clean` operation, `python test.py clean`
+has no output and no option to create output.
 
 An in-place algorithm is one that transforms input without using any 
 auxiliary memory/datastructure.
@@ -85,7 +87,7 @@ LTC : [LXU7u4LXBaACBJDEAQoBqipjg5LUzpXxbR]()
 DSH : [Xg5Xo39xkiL3Uk8FxUfiHDcmGuANFLovnn]()
 DCR : [DsS6rEmn2k2kaLvqgFw2gy5kuQnE3X5jy2D]()
 
-(ANT || EOS || ETH || GNO || GNT || REP)
+(ANT / EOS / ETH / GNO / GNT / REP)
 [0xDB4262baD41150ba2db79441D88Eb99d50c0262b]()
 
 _Not that I expect to make any money off this project, but I am curious to 

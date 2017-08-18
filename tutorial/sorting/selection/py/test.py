@@ -47,6 +47,10 @@ def clean():
     except(Exception):
         pass
     try:
+        shutil.rmtree('.ropeproject')
+    except(Exception):
+        pass
+    try:
         shutil.rmtree('.cache')
     except(Exception):
         pass
