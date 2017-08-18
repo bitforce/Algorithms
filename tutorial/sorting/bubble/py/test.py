@@ -35,22 +35,21 @@ def write(fname, data):
 
 
 def clean():
-    print 'cleaning directory...'
     try:
         filelist = [f for f in os.listdir('.')
                     if f.endswith('.pyc') or f.endswith('.txt')]
         for f in filelist:
             os.remove(f)
     except(Exception):
-        print 'no bytecode or txt files to remove'
+        pass
     try:
         shutil.rmtree('__pycache__')
     except(Exception):
-        print 'no __pycache__ dir to remove'
+        pass
     try:
         shutil.rmtree('.cache')
     except(Exception):
-        print 'no .cache dir to remove'
+        pass
 
 
 if __name__ == '__main__':
