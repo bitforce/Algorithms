@@ -10,7 +10,7 @@ def test():
         sys.exit("\033[91mcommandline args required\033[0m")
     elif len(args) == 1:
         if sys.argv[1] == 'clean':
-            clean()
+            clean(silent=False)
         else:
             f = open(sys.argv[1], 'r')
             numlist = []
@@ -21,6 +21,9 @@ def test():
             write('original.txt', numlist)
             bubble_sort(numlist)
             write('modified.txt', numlist)
+    elif len(args) == 2:
+        if sys.argv[1] == '--silent' and sys.argv[2] == 'clean':
+            clean(silent=True)
     else:
         print args
         bubble_sort(args)
@@ -34,26 +37,50 @@ def write(fname, data):
         f.write('\n')
 
 
-def clean():
-    try:
-        filelist = [f for f in os.listdir('.')
-                    if f.endswith('.pyc') or f.endswith('.txt')]
-        for f in filelist:
-            os.remove(f)
-    except(Exception):
-        pass
-    try:
-        shutil.rmtree('__pycache__')
-    except(Exception):
-        pass
-    try:
-        shutil.rmtree('.ropeproject')
-    except(Exception):
-        pass
-    try:
-        shutil.rmtree('.cache')
-    except(Exception):
-        pass
+def clean(silent):
+    if silent:
+        try:
+            filelist = [f for f in os.listdir('.')
+                        if f.endswith('.pyc') or f.endswith('.txt')]
+            for f in filelist:
+                os.remove(f)
+        except(Exception):
+            pass
+        try:
+            shutil.rmtree('__pycache__')
+        except(Exception):
+            pass
+        try:
+            shutil.rmtree('.ropeproject')
+        except(Exception):
+            pass
+        try:
+            shutil.rmtree('.cache')
+        except(Exception):
+            pass
+    else:
+        try:
+            filelist = [f for f in os.listdir('.') if f.endswith('.pyc')]
+            for f in filelist:
+                print 'removing ' + f
+                os.remove(f)
+        except(Exception):
+            print 'No byte code files to delete'
+        try:
+            print 'removing pycache directories...'
+            shutil.rmtree('__pycache__')
+        except(Exception):
+            pass
+        try:
+            print 'removing ropeproject directories...'
+            shutil.rmtree('.ropeproject')
+        except(Exception):
+            pass
+        try:
+            print 'removing cache directories...'
+            shutil.rmtree('.cache')
+        except(Exception):
+            pass
 
 
 if __name__ == '__main__':

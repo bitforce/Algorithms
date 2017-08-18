@@ -2,13 +2,13 @@
                             ALGORITHM DOCUMENTATION
 ===============================================================================
 A.1:
-    The `partition()` method takes the last element as the pivot and places the 
+    The partition() method takes the last element as the pivot and places the 
 pivot element at its correct position in the sorted array, and places elements 
 smaller than it to the left of it and all other elements to the right.
 
 A.2:
-    A pivot index is created and set as the last element and a current index is 
-created and set to the first element.
+    A pivot index is created and set as to the last element. Then a current 
+index is created and set to the first element.
 
 A.3:
     Index variable `j` is set to the low element and traverses than array and 
