@@ -1,15 +1,15 @@
 class HeapSort {
     public static void heapify(int[] arr, int size, int idx) {
         int largest = idx;
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
+        int left = 2 * idx + 1;
+        int right = 2 * idx + 2;
         if (left < size && arr[left] > arr[largest])
             largest = left;
         if (right < size && arr[right] > arr[largest])
             largest = right;
-        if (largest != i) {
-            int swap = arr[i];
-            arr[i] = arr[largest];
+        if (largest != idx) {
+            int swap = arr[idx];
+            arr[idx] = arr[largest];
             arr[largest] = swap;
             heapify(arr, size, largest);
         }
