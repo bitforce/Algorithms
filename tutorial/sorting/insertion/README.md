@@ -1,4 +1,4 @@
-# SelectionSort
+# InsertionSort
 
 Overview
 ---
@@ -58,5 +58,5 @@ Performance
 --------------------------------------------------------------------------------
 
 <!--- this is where the sources go -->
-[1]: ./.res/img2.gif
-[2]: ./.res/img1.jpg
+[1]: ./.res/img1.gif
+[2]: ./.res/img2.png
