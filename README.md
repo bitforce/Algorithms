@@ -80,7 +80,7 @@ Author
 [LinkedIn](https://www.linkedin.com/in/brandonjohnsonxyz/)
 [Personal](https://brandonjohnson.life)
 [GitHub](https://github.com/bitforce)
-
+<!--
 ##### shameless plugs
 BTC : [16euoYuArXAL2y8kqBgofpvRZ2SevjbqME]()
 LTC : [LXU7u4LXBaACBJDEAQoBqipjg5LUzpXxbR]()
@@ -92,3 +92,4 @@ DCR : [DsS6rEmn2k2kaLvqgFw2gy5kuQnE3X5jy2D]()
 
 _Not that I expect to make any money off this project, but I am curious to 
 see what would happen_.
+-->
