@@ -13,6 +13,8 @@ and advanced intricacies of logic, with the simplicity of not
 necessarily having to go through cumbersome code docs or 
 obscure literature to implement, run, and study.
 
+###### Structure 
+---
 This project contains the following directories...
 
 Usage
@@ -21,16 +23,35 @@ There are no requirements or dependencies to install, simply go to the aptly
 named directories to search which algorithms you'd like to know about. You 
 know you hit the main portion of the algorithm directory when you find a 
 README containing information on the algorithm itself, as will as how to 
-run it.
+run it. In all cases involving compiling Java files using `make`, the 
+argument _T_ will always need to be within quotations; for example:
+`make args='3 2 1'` or `make args='path/to/test/file'`; however, 
+if _T_ is a path, you may remove quotations since there are no 
+non-escaped whitespaces within the path to confuse `Make` 
+interpreter.
 
-
-Example
----
+###### Example
 Assume you'd like to understand and see the original QuickSort algorithm in 
 action, and assuming you are in the project folder, you would simply go 
 into [./sorting/quick/standard]() and there you will find a README file 
 containing information about QuickSort and how to run it in all the 
 available languages.
+
+###### Testing
+Values can either be tested manually through the internal source file via 
+the commandline or through an input text file. Writing a small script to 
+export the necessary values to a text file is also a good way to test 
+specific and large amounts of values. 
+
+If the tests are specific to the language, then a testing directory will
+exist within the language-specific folder, otherwise, a generic testing 
+folder will exist in the same dir as the lang-spec ones.
+
+###### Cleaning
+Perhaps you do not want to clean each tutorial directory individually, 
+but remove all unnecessary files and folders within the entire 
+Algorithm's project directory; then you can simply run the 
+following command: `./clean.sh`
 
 Note
 ---
@@ -49,24 +70,6 @@ has no output and no option to create output.
 An in-place algorithm is one that transforms input without using any 
 auxiliary memory/datastructure.
 
-Testing
----
-Values can either be tested manually through the internal source file via 
-the commandline or through an input text file. Writing a small script to 
-export the necessary values to a text file is also a good way to test 
-specific and large amounts of values. 
-
-If the tests are specific to the language, then a testing directory will
-exist within the language-specific folder, otherwise, a generic testing 
-folder will exist in the same dir as the lang-spec ones.
-
-Cleaning
----
-Perhaps you do not want to clean each tutorial directory individually, 
-but remove all unnecessary files and folders within the entire 
-Algorithm's project directory; then you can simply run the 
-following command: `./clean.sh`
-
 Contributions
 ---
 N/A
@@ -74,6 +77,10 @@ N/A
 License
 ---
 Licensed under the WTFPL - see [LICENSE](./LICENSE) for explicit details.
+
+Version
+---
+1.0.0
 
 Author
 ---

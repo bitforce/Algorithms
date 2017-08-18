@@ -1,4 +1,4 @@
-# HeapSort
+# QuickSort
 
 Overview
 ---
@@ -20,24 +20,15 @@ Usage
 `make [--silent] clean`
 
 `javac *.java`
-`java HeapSort T`
+`java QuickSort T`
 
 `python test.py T`
 
-Where _T_ is an array of vals or a text file containing vals. Alternatively,
-use make _T_ to quickly recompile and run the Java Test classes with args 
-and if you so desire, use the latter make-command to remove all class 
-files and spruce up the directory. Make sure that if using the former 
-method, that _T_ is within quotations. The `--silent` option can be 
-used to minimize Makefile output to be only what you allow.
-
-_Note that `make` and `java[c]` commands occur within ./java dir and any 
-python commands occur within the ./py dir._
+Where _T_ is an array of vals or a text file containing vals. 
 
 
 Example
 ---
-<!--- personalize this for HeapSort -->
 `make --silent args=../.tests/input.txt`
 `make args='3 2 1'`
 `make clean`
