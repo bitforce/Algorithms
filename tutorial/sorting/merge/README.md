@@ -36,7 +36,7 @@ Example
 
 `python test.py ../.tests/.input.txt`
 `python test.py 3 2 1`
-`python clean`
+`python test.py clean`
 
 Performance
 ---

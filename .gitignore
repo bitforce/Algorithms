@@ -2,5 +2,6 @@ NOTICE
 __pycache__
 .ropeproject/
 .DS_Store
+*.class
 *.pyc
 *.swp
