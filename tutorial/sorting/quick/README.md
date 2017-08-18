@@ -5,11 +5,12 @@ Overview
 Applications/Purpose
 
 ###### Advantages
----
 N/A
 
 ###### Mechanics
----
+N/A
+
+###### Comments
 N/A
 
 ![][1]
@@ -40,8 +41,8 @@ Example
 
 Performance
 ---
-* Time: Ω(n log(n)) | θ(n long(n)) | O(n log(n))
-* Space: O(1)
+* Time: Ω(n log(n)) | θ(n long(n)) | O(n^2)
+* Space: O(log(n))
 
 ![][2]
 ![][3]
@@ -50,5 +51,5 @@ Performance
 
 --------------------------------------------------------------------------------
 [1]: ./.res/img1.gif
-[2]: ./.res/img2.gif
-[3]: ./.res/img3.svg
+[2]: ./.res/img2.png
+[3]: ./.res/img3.gif
