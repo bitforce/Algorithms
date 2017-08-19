@@ -1,4 +1,4 @@
-from bubblesort import bubble_sort
+from bubblesort import bubblesort
 import shutil
 import sys
 import os
@@ -6,28 +6,45 @@ import os
 
 def test():
     args = sys.argv[1:]
-    if len(args) == 0:
-        sys.exit("\033[91mcommandline args required\033[0m")
-    elif len(args) == 1:
-        if sys.argv[1] == 'clean':
-            clean(silent=False)
-        else:
-            f = open(sys.argv[1], 'r')
-            numlist = []
-            for line in f:
-                for i in line.split():
-                    if i.isdigit():
-                        numlist.append(int(i))
-            write('original.txt', numlist)
-            bubble_sort(numlist)
-            write('modified.txt', numlist)
-    elif len(args) == 2:
-        if sys.argv[1] == '--silent' and sys.argv[2] == 'clean':
-            clean(silent=True)
+    larg = len(args)
+    arg1 = ''
+    arg2 = ''
+    end = '\033[0m'
+    red = '\033[91m'
+
+    if larg == 0:
+        sys.exit(red + "commandline args required" + end)
     else:
+        arg1 = sys.argv[1]
+        if(larg == 2):
+            arg2 = sys.argv[2]
+
+    if larg == 1:
+        if arg1 == 'clean':
+            clean(silent=False)
+        elif "../.tests/" in arg1:
+            try:
+                f = open(arg1, 'r')
+                numlist = []
+                for line in f:
+                    for i in line.split():
+                        if i.isdigit():
+                            numlist.append(int(i))
+                write('original.txt', numlist)
+                bubblesort(numlist)
+                write('modified.txt', numlist)
+            except(Exception):
+                sys.exit(red + "error reading test file" + end)
+        else:
+            sys.exit(red + 'incorrect arguments' + end)
+    if larg == 2 and arg1 == '--silent' and arg2 == 'clean':
+        clean(silent=True)
+    try:
         print args
-        bubble_sort(args)
+        bubblesort(args)
         print args
+    except(Exception):
+        sys.exit(red + 'arguments not recognized' + end)
 
 
 def write(fname, data):
@@ -40,10 +57,14 @@ def write(fname, data):
 def clean(silent):
     if silent:
         try:
-            filelist = [f for f in os.listdir('.')
-                        if f.endswith('.pyc') or f.endswith('.txt')]
+            filelist = [f for f in os.listdir('.') if f.endswith('.pyc')]
             for f in filelist:
                 os.remove(f)
+        except(Exception):
+            pass
+        try:
+            os.remove('original.txt')
+            os.remove('modified.txt')
         except(Exception):
             pass
         try:
@@ -62,25 +83,32 @@ def clean(silent):
         try:
             filelist = [f for f in os.listdir('.') if f.endswith('.pyc')]
             for f in filelist:
-                print 'removing ' + f
                 os.remove(f)
+                print 'removed ' + f
         except(Exception):
-            print 'No byte code files to delete'
+            print 'no byte code files to delete'
         try:
-            print 'removing pycache directories...'
+            os.remove('original.txt')
+            os.remove('modified.txt')
+            print 'removed test output files'
+        except(Exception):
+            print 'no test output to delete'
+        try:
             shutil.rmtree('__pycache__')
+            print 'removed __pycache__'
         except(Exception):
-            pass
+            print 'no __pycache__ to delete'
         try:
-            print 'removing ropeproject directories...'
             shutil.rmtree('.ropeproject')
+            print 'removed ropeproject'
         except(Exception):
-            pass
+            print 'no ropeproject to delete'
         try:
-            print 'removing cache directories...'
             shutil.rmtree('.cache')
+            print 'removed cache directory'
         except(Exception):
-            pass
+            print 'no .cache directory to delete'
+    sys.exit()
 
 
 if __name__ == '__main__':
