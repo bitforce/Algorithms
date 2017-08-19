@@ -11,14 +11,12 @@ def test():
     arg2 = ''
     end = '\033[0m'
     red = '\033[91m'
-
     if larg == 0:
         sys.exit(red + "commandline args required" + end)
     else:
         arg1 = sys.argv[1]
         if(larg == 2):
             arg2 = sys.argv[2]
-
     if larg == 1:
         if arg1 == 'clean':
             clean(silent=False)
@@ -37,16 +35,17 @@ def test():
                 sys.exit(red + "error reading test file" + end)
         else:
             sys.exit(red + 'incorrect arguments' + end)
-    if larg == 2 and arg1 == '--silent' and arg2 == 'clean':
+    elif larg == 2 and arg1 == '--silent' and arg2 == 'clean':
         clean(silent=True)
-    if larg == 2 and arg1 == 'clean' and arg2 == '--silent':
+    elif larg == 2 and arg1 == 'clean' and arg2 == '--silent':
         clean(silent=True)
-    try:
-        print args
-        quicksort(args)
-        print args
-    except(Exception):
-        sys.exit(red + 'arguments not recognized' + end)
+    else:
+        try:
+            print args
+            quicksort(args)
+            print args
+        except(Exception):
+            sys.exit(red + 'error running manual test inputs' + end)
 
 
 def write(fname, data):
@@ -57,60 +56,56 @@ def write(fname, data):
 
 
 def clean(silent):
+    curdir = [f for f in os.listdir('.')]
+    bytcode = False
+    pycache = False
+    hcache = False
+    tfiles = False
+    rope = False
+    for cur in curdir:
+        if '.pyc' in cur:
+            bytcode = True
+        if '__pycache__' in cur:
+            pycache = True
+        if '.cache' in cur:
+            hcache = True
+        if 'modified.txt' and 'original.txt' in cur:
+            tfiles = True
+        if '.ropeproject' in cur:
+            rope = True
     if silent:
-        try:
+        if bytcode:
             filelist = [f for f in os.listdir('.') if f.endswith('.pyc')]
             for f in filelist:
                 os.remove(f)
-        except(Exception):
-            pass
-        try:
+        if pycache:
+            shutil.rmtree('__pycache__')
+        if hcache:
+            shutil.rmtree('.cache')
+        if rope:
+            shutil.rmtree('.ropeproject')
+        if tfiles:
             os.remove('original.txt')
             os.remove('modified.txt')
-        except(Exception):
-            pass
-        try:
-            shutil.rmtree('__pycache__')
-        except(Exception):
-            pass
-        try:
-            shutil.rmtree('.ropeproject')
-        except(Exception):
-            pass
-        try:
-            shutil.rmtree('.cache')
-        except(Exception):
-            pass
     else:
-        try:
+        if bytcode:
             filelist = [f for f in os.listdir('.') if f.endswith('.pyc')]
             for f in filelist:
                 os.remove(f)
                 print 'removed ' + f
-        except(Exception):
-            print 'no byte code files to delete'
-        try:
+        if pycache:
+            shutil.rmtree('__pycache__')
+            print 'removed __pycache__'
+        if hcache:
+            shutil.rmtree('.cache')
+            print 'removed .cache'
+        if rope:
+            shutil.rmtree('.ropeproject')
+            print 'removed .ropeproject'
+        if tfiles:
             os.remove('original.txt')
             os.remove('modified.txt')
             print 'removed test output files'
-        except(Exception):
-            print 'no test output to delete'
-        try:
-            shutil.rmtree('__pycache__')
-            print 'removed __pycache__'
-        except(Exception):
-            print 'no __pycache__ to delete'
-        try:
-            shutil.rmtree('.ropeproject')
-            print 'removed ropeproject'
-        except(Exception):
-            print 'no ropeproject to delete'
-        try:
-            shutil.rmtree('.cache')
-            print 'removed cache directory'
-        except(Exception):
-            print 'no .cache directory to delete'
-    sys.exit()
 
 
 if __name__ == '__main__':

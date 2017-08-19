@@ -17,12 +17,12 @@ class QuickSort {
         array[high] = temp;
         return i+1;
     }
-    private void quicksort(int[] array, int low, int high) { // A.5
+    private void sort(int[] array, int low, int high) { // A.5
         if(low < high) { // A.6
             int part = partition(array, low, high);
-            quicksort(array, low, part-1);
-            quicksort(array, part+1, high);
+            sort(array, low, part-1);
+            sort(array, part+1, high);
         }
     }
-    void quicksort(int[] array) {quicksort(array, 0, array.length-1);} // A.7
+    void quicksort(int[] array) {sort(array, 0, array.length-1);} // A.7
 }
