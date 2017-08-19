@@ -1,4 +1,4 @@
-from bubblesort import bubblesort
+from quicksort import quicksort
 import shutil
 import sys
 import os
@@ -31,7 +31,7 @@ def test():
                         if i.isdigit():
                             numlist.append(int(i))
                 write('original.txt', numlist)
-                bubblesort(numlist)
+                quicksort(numlist)
                 write('modified.txt', numlist)
             except(Exception):
                 sys.exit(red + "error reading test file" + end)
@@ -39,9 +39,11 @@ def test():
             sys.exit(red + 'incorrect arguments' + end)
     if larg == 2 and arg1 == '--silent' and arg2 == 'clean':
         clean(silent=True)
+    if larg == 2 and arg1 == 'clean' and arg2 == '--silent':
+        clean(silent=True)
     try:
         print args
-        bubblesort(args)
+        quicksort(args)
         print args
     except(Exception):
         sys.exit(red + 'arguments not recognized' + end)
