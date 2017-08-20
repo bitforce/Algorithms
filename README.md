@@ -14,7 +14,33 @@ necessarily having to go through cumbersome code docs or
 obscure literature to implement, run, and study.
 
 ###### Structure 
-This project contains the following directories in the follow formats...
+Within the top-level dir, exists: project license, readme, shell script, and
+the tutorial dir containing everything explained in the overview. The readme 
+license, and `clean.sh` are pretty self-explanatory; however, within the 
+tutorial dir, there is an organization of algorithms based on their type 
+and other traits; you know when you are in the actual specific algorithm 
+folder, because a README.md file be there and the last two folders in 
+the path name will spell out the algorithm's full name; for example: 
+_.../sort/quick/_. The current dir will contain the readme and 
+folders corresponding to the language that the algorithm was 
+written in. Within those folders 3 main files: the algo file 
+ending in that folder name's extension, a test file also 
+ending in the same extension, and a comment file to 
+explain the code fragments of the algo file. Note 
+that some of these dirs will contain an extra 
+file, such as in the java folders, to assist 
+in compilation and/or argument parameters.
+
+The subdirs containing the readme files and code extension name folders shall
+be known as _tutorial dirs_ to make this explanation easier. Therefore; the 
+tutorial dirs also contain hidden folders: _.alt_, _.res_, and _.tests_ 
+which signify: alternative algo implementation, resources, and tests 
+respectively. The alt dir may only appear in some tutorial dirs 
+which are known to have variant implementations of the algo and 
+those dirs will contain subfolders with the name of the variant 
+implementation and the contents of those dirs will look just 
+like the tutorial dirs. The res and tests folders; however, 
+will always be included in every tutorial dir.
 
 Usage
 ---

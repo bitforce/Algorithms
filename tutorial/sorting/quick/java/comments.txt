@@ -1,5 +1,5 @@
 ===============================================================================
-                            ALGORITHM DOCUMENTATION
+                        JAVA QUICKSORT DOCUMENTATION
 ===============================================================================
 A.1
 ===
@@ -20,7 +20,7 @@ incremented and is swapped with `j` so that an order exists.
 
 A.4
 ===
-The second swap which switches the second to last and last element.
+The second swap functionality; switches the last and second to last element.
 
 A.5
 ===
@@ -37,9 +37,4 @@ than the high variable, which if so, a partition is created using said
 variables and two recursive sorts are called to then sort each 
 partition into smaller pieces and then sort those smaller 
 partitions.
-
-A.7
-===
-A helper method that minimizes parameter size and assists in the calling 
-of said method.
 ===============================================================================

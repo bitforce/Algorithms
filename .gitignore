@@ -1,6 +1,6 @@
-NOTICE
 __pycache__
 .ropeproject/
+.devnote.txt
 .DS_Store
 *.class
 *.pyc

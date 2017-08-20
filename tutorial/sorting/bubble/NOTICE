@@ -1,0 +1,10 @@
+================================================================================
+                                DEVELOPER NOTICE
+================================================================================
+>   perhaps attempt to improve testing by adding time function that measures 
+    how long each algorithm takes; works for both text-file and manual input
+
+>   perhaps allow a --silent option with py test
+
+>   programs work as expected; no issues here
+================================================================================
