@@ -6,16 +6,17 @@ class QuickSort {
         for(int j = low; j < high; j++) { // A.3
             if(array[j] <= pivot) {
                 i++;
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                swap(array, i, j);
             }
         }
         // A.4.4J
-        int temp = array[i+1];
-        array[i+1] = array[high];
-        array[high] = temp;
+        swap(array, i+1, high);
         return i+1;
+    }
+    private void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
     private void sort(int[] array, int low, int high) { // A.5
         if(low < high) { // A.6

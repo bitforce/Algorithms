@@ -48,6 +48,13 @@ two elements still may be compared before or after the pivot--again, this
 depends on the implementation.
 
 ###### Analysis
+_BT_:
+  When the partition divides the list into two (nearly) equal pieces, the 
+  recursive calls process only half the list size and consequently this 
+  makes only n=2^x calls before we reach a list length of 1. The ideal 
+  factor comes into play...
+
+
 _WT_:
   This occurs when the pivot either divides the array into sublists of length 0 
   and n-1 or when the pivot attempting to divide an array where all elements
@@ -55,11 +62,13 @@ _WT_:
   smallest or largest element in the list. When this occurs, each 
   recursive call ...
 
-_BT_:
-  When the partition divides the list into two (nearly) equal pieces, the 
-  recursive calls process only half the list size and consequently this 
-  makes only n=2^x calls before we reach a list length of 1. The ideal 
-  factor comes into play 
+_WS_:
+  Space complexity may differ in Quicksort variants; however, for the one found 
+  here, it uses in-place partitioning, which only takes O(1) space, but post-
+  partition, the sublists are recursively sorted; the sublist with the lesser 
+  elements being sorted first and requiring at most O(log(n)) space; followed 
+  by the other part being sorted using tail recursion or iteration, which 
+  doesn't add to the call stack, thus leaving us with O(log(n)) as worst.
 
 ###### History
 Developed in 1959 by Tony Hoare while in the Soviet Union to enhance a machine 
@@ -119,8 +128,8 @@ Where _T_ is an array of vals or a text file containing vals.
 [Quora](http://qr.ae/TbcAbE)
 
 ###### Graphical
-[Image 2](https://commons.wikimedia.org/wiki/File:Sorting_quicksort_anim.gif)
-[Image 1](https://commons.wikimedia.org/wiki/File:Quicksort-example.gif)
+[Image 1](https://commons.wikimedia.org/wiki/File:Sorting_quicksort_anim.gif)
+[Image 2](https://commons.wikimedia.org/wiki/File:Quicksort-example.gif)
 
 --------------------------------------------------------------------------------
 [a]: ./.res/img1.gif
