@@ -13,7 +13,7 @@ class QuickSort {
         swap(array, i+1, high);
         return i+1;
     }
-    private void swap(int[] array, int i, int j) {
+    private void swap(int[] array, int i, int j) { // A.8
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;

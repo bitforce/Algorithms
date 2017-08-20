@@ -37,4 +37,8 @@ than the high variable, which if so, a partition is created using said
 variables and two recursive sorts are called to then sort each 
 partition into smaller pieces and then sort those smaller 
 partitions.
+
+A.7
+===
+A swap method to make the code more organized and syntactically appealing.
 ===============================================================================
