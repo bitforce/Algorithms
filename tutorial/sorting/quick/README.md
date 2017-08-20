@@ -9,7 +9,7 @@ elements and then recursively sorting the subarrays.
 ![][a]
 
 ###### Performance
-* Time: Ω(n log(n)) | θ(n long(n)) | O(n^2)
+* Time: Ω(n log(n)) - θ(n long(n)) - O(n^2)
 * Space: O(log(n))
 
 ###### Advantages
@@ -17,7 +17,7 @@ The pivot element and recursive sort implementation makes this algorithm natural
 nimble and coherent. Unlike standard [sub]array splits, which usually occur in the 
 middle, by using the pivot, you can choose where to start the array separation and 
 optimize the algorithm by shifting the pivot based on how [un]sorted the array is. 
-See the _Design_ section for Quicksort optimization explanations. 
+See the design section below for Quicksort optimization explanations. 
 
 ###### Mechanics
 QuickSort works by selecting an element--can be random; preferably as close to the
