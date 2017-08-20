@@ -4,14 +4,16 @@ Overview
 ---
 A complete library of personally developed and standard algorithms along with 
 explanations of their use-cases, performance-analysis, and code-construction.
-Languages used: Java & Python; however, there are expectations to expand 
-to: C/C++, Ruby, Go, JavaScript, Shell, Haskell, Ocaml, Perl, X86. The 
-idea behind this project being the ability to view via many lenses
-how languages evolve, differ, and adapt to best fit their design 
-limits and purposes such that they cater to the most fundamental 
-and advanced intricacies of logic, with the simplicity of not 
-necessarily having to go through cumbersome code docs or 
-obscure literature to implement, run, and study.
+The idea behind this project being the ability to view via many lenses how 
+languages evolve, differ, and adapt to best fit their design limits and 
+purposes such that they cater to the most fundamental and advanced 
+intricacies of logic, with the simplicity of not necessarily 
+having to go through cumbersome code docs or obscure 
+literature to implement, run, and study.
+
+Current language implementations:
+[Python]()
+[Java]()
 
 ###### Structure 
 Within the top-level dir, exists: project license, readme, shell script, and
