@@ -134,6 +134,7 @@ Where _T_ is an array of vals or a text file containing vals.
 ###### Graphical
 [Image 1](https://commons.wikimedia.org/wiki/File:Sorting_quicksort_anim.gif)
 [Image 2](https://commons.wikimedia.org/wiki/File:Quicksort-example.gif)
+[Image 3](http://users.informatik.uni-halle.de/~jopsi/dssea/chap6.shtml)
 
 --------------------------------------------------------------------------------
 [a]: ./.res/img1.gif

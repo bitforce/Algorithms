@@ -15,6 +15,8 @@ Current language implementations
 [Python](https://www.python.org/)
 [Java](https://www.java.com/en/)
 
+![](.img.png)
+
 ###### Structure 
 Within the top-level dir, exists: project license, readme, shell script, and
 the tutorial dir containing everything explained in the overview. The readme 
