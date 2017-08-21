@@ -12,8 +12,7 @@ having to go through cumbersome code docs or obscure
 literature to implement, run, and study.
 
 Current language implementations:
-[Python]()
-[Java]()
+[Python]() | [Java]()
 
 ###### Structure 
 Within the top-level dir, exists: project license, readme, shell script, and
