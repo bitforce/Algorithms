@@ -15,7 +15,7 @@ Current language implementations
 [Python](https://www.python.org/)
 [Java](https://www.java.com/en/)
 
-![](.img.png)
+![](./.res/fig.png)
 
 ###### Structure 
 Within the top-level dir, exists: project license, readme, shell script, and
