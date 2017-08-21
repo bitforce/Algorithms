@@ -51,8 +51,11 @@ depends on the implementation.
 _BCT_:
   When the partition divides the list into two (nearly) equal pieces, the 
   recursive calls process only half the list size and consequently this 
-  makes only n=2^x calls before we reach a list length of 1. The ideal 
-  factor comes into play...
+  makes only n=2^x calls before we reach a list length of 1. As the 
+  sublist progressively cuts itself in half, the traversal of said 
+  list is on length of that sublist; whereby in an ideal scenario, 
+  the list and following sublists split in half perfectly for 
+  every partition call.
 
 
 _WCT_:
@@ -68,7 +71,7 @@ _WCT_:
 
 _WCS_:
   Space complexity may differ in Quicksort variants; however, for the one found 
-  here, it uses in-place partitioning, which only takes O(1) space, but post-
+  here, it uses in-place partitioning, which only takes O(1) space, but post
   partition, the sublists are recursively sorted; the sublist with the lesser 
   elements being sorted first and requiring at most O(log(n)) space; followed 
   by the other part being sorted using tail recursion or iteration, which 
