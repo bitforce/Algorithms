@@ -11,8 +11,9 @@ intricacies of logic, with the simplicity of not necessarily
 having to go through cumbersome code docs or obscure 
 literature to implement, run, and study.
 
-Current language implementations:
-[Python]() | [Java]()
+Current language implementations
+[Python](https://www.python.org/)
+[Java](https://www.java.com/en/)
 
 ###### Structure 
 Within the top-level dir, exists: project license, readme, shell script, and

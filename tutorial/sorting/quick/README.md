@@ -48,21 +48,25 @@ two elements still may be compared before or after the pivot--again, this
 depends on the implementation.
 
 ###### Analysis
-_BT_:
+_BCT_:
   When the partition divides the list into two (nearly) equal pieces, the 
   recursive calls process only half the list size and consequently this 
   makes only n=2^x calls before we reach a list length of 1. The ideal 
   factor comes into play...
 
 
-_WT_:
+_WCT_:
   This occurs when the pivot either divides the array into sublists of length 0 
-  and n-1 or when the pivot attempting to divide an array where all elements
+  and n-1 or when the pivot attempts to divide an array where all elements
   equal. The former signifies that the pivot (likely) happened to be the 
-  smallest or largest element in the list. When this occurs, each 
-  recursive call ...
+  smallest or largest element in the list and the latter proves that you 
+  don't know what an algorithm actually is. When this occurs, each 
+  recursive call processes a sublist only whose length is only 1 
+  less and thus you are making n calls on an array of n length.
 
-_WS_:
+  See [figure](./.res/fig1.png) for graphical representation.
+
+_WCS_:
   Space complexity may differ in Quicksort variants; however, for the one found 
   here, it uses in-place partitioning, which only takes O(1) space, but post-
   partition, the sublists are recursively sorted; the sublist with the lesser 
