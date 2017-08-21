@@ -13,11 +13,11 @@ elements and then recursively sorting the subarrays.
 * Space: O(log(n))
 
 ###### Constraints
-Unstable--in the sense of...; degrades down to O(n^2) in case of unnecessary pivot
-selections; plausible stack overflow error in some implementations due to O(n) 
-embedded recursive calls. Another disadvantage is the construction of the 
-partitioning algorithm, which always seems to an issue in Quicksort's 
-design--so not an easy algorithm to create/mold.
+Degrades down to O(n^2) in case of unnecessary pivot selections and plausible stack 
+overflow error in some implementations due to O(n) embedded recursive calls. 
+Another disadvantage is the construction of the partitioning algorithm, 
+which always seems to an issue in Quicksort's design--so not an easy 
+algorithm to sculpt.
 
 ###### Advantages
 The pivot element and recursive sort implementation makes this algorithm naturally 
