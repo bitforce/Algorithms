@@ -74,6 +74,8 @@ cat modified.txt
 ```
 For large inputs, we test using text files and export both the original file 
 and the modified file so you can open it up and see the algorithm's effects.
+Also note that you do not need to use `cat`, you can also use `open` or 
+go to the directory via your OS's GUI and click on the files.
 
 ###### Testing
 Values can either be tested manually through the internal source file via 

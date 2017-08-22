@@ -7,7 +7,7 @@ is to eliminate turtles (small values near the end of the list) which are the ro
 cause of BubbleSort's poor runtime. In BubbleSort, when any of two elements are 
 compared, there is a gap between them with a distance of 1 (because BubbleSort 
 compares the current and next element); the idea behind CombSort being a gap
-can be more than 1. 
+can be more than 1 and this improves on efficiency. 
 
 
 ![][a]
@@ -46,6 +46,7 @@ usage in the algorithm stays the same since the array's size isn't
 being morphed.
 
 ###### Analysis
+!
 _BCT_:
   When the partition divides the list into two (nearly) equal pieces, the 
   recursive calls process only half the list size and consequently this 
@@ -80,6 +81,7 @@ Developed by Włodzimierz Dobosiewicz in 1980 and later rediscovered by Stephen
 Lacey and Richard Box in 1991.
 
 ###### Design
+!
 Most standard implementations are based off Lomuto's partition scheme; however, 
 there are other partition schemes, like Hoare's _OG_ original scheme. Most of 
 these alterations are formed on shifting the pivot [behavior], either by 
