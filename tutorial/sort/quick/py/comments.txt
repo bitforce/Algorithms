@@ -1,5 +1,5 @@
 ===============================================================================
-                        JAVA QUICKSORT DOCUMENTATION
+                        PYTHON QUICKSORT DOCUMENTATION
 ===============================================================================
 A.1
 ===
@@ -20,7 +20,7 @@ incremented and is swapped with `j` so that an order exists.
 
 A.4
 ===
-The second swap functionality; switches the last and second to last element.
+The second swap which switches the second to last and last element.
 
 A.5
 ===
@@ -40,5 +40,6 @@ partitions.
 
 A.7
 ===
-A swap method to make the code more organized and syntactically appealing.
+A helper method that minimizes parameter size and assists in the calling 
+of said method.
 ===============================================================================

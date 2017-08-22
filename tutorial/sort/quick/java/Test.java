@@ -27,7 +27,9 @@ class Test extends QuickSort {
         if(args.length == 0) {
             System.err.println("err: args.length > 0");
             System.exit(0);
-        } else if(args.length == 1) {
+        }
+        QuickSort sort = new QuickSort();
+        if(args.length == 1) {
             Scanner in = null;
             try {in = new Scanner(new File(args[0]));}
             catch(Exception e) {e.printStackTrace();}
@@ -39,12 +41,10 @@ class Test extends QuickSort {
             while(in.hasNext())
                 list.add(in.nextInt());
             int[] arraylist = array(list);
-            QuickSort sort = new QuickSort();
             write("original.txt", arraylist);
             sort.quicksort(arraylist); 
             write("modified.txt", arraylist);
         } else {
-            QuickSort sort = new QuickSort();
             int[] array = new int[args.length];
             for(int i = 0; i < array.length; i++)
                 array[i] = Integer.parseInt(args[i]);
