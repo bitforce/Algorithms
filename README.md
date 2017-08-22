@@ -67,9 +67,11 @@ information about QuickSort and how to run it in all the available
 languages. Assuming you'd want to run it Java, you would then go 
 to the ./java subdirectory and run a test of sorts. Perhaps you 
 would like to see the default test; thus, you would run:
-`make args=../.tests/input.txt`
-`cat original.txt`
-`cat modified.txt`
+```
+make args=../.tests/input.txt
+cat original.txt
+cat modified.txt
+```
 For large inputs, we test using text files and export both the original file 
 and the modified file so you can open it up and see the algorithm's effects.
 

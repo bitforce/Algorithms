@@ -2,17 +2,22 @@
 
 Overview
 ---
-A general-purpose divide and conquer, sorting algorithm which works by utilizing a 
-pivot to divide the array into two subarrays consisting of lesser and greater 
-elements and then recursively sorting the subarrays.
+A simple sorting algorithm that improves on BubbleSort and where the fundamental idea 
+is to eliminate turtles (small values near the end of the list) which are the root 
+cause of BubbleSort's poor runtime. In BubbleSort, when any of two elements are 
+compared, there is a gap between them with a distance of 1 (because BubbleSort 
+compares the current and next element); the idea behind CombSort being a gap
+can be more than 1. 
+
 
 ![][a]
 
 ###### Performance
-* Time: Ω(n log(n)) - θ(n long(n)) - O(n^2)
-* Space: O(log(n))
+* Time: Ω(n) - θ(n^2/2^p) - O(n^2)
+* Space: O(1)
 
 ###### Constraints
+!
 Degrades down to O(n^2) in case of unnecessary pivot selections and plausible stack 
 overflow error in some implementations due to O(n) embedded recursive calls. 
 Another disadvantage is the construction of the partitioning algorithm, 
@@ -20,6 +25,7 @@ which always seems to an issue in Quicksort's design--so not an easy
 algorithm to sculpt.
 
 ###### Advantages
+!
 The pivot element and recursive sort implementation makes this algorithm naturally 
 nimble and coherent. Unlike standard [sub]array splits, which usually occur in the 
 middle, by using the pivot, you can choose where to start the array separation and 
@@ -30,22 +36,14 @@ and internal memory management mechanisms. Quicksort's formulation makes it
 amenable to parallelization.
 
 ###### Mechanics
-QuickSort works by selecting an element somewhere in the array; the location of 
-the pivot (front, middle, back, random) implementation is usually based on the 
-problem algo is trying to solve. Once the pivot is selected, is begins to part 
-the array and swap lesser-value elements in front of it and greater-value 
-elements in front of it. Thereafter, it shifts the pivot; again depending 
-on the implementation, the pivot is either simply moved over or exactly 
-pointed to a specific position in the array. Then the process repeats 
-itself recursively until the pivot element reaches the original 
-position or it realizes that it need not traverse the array any 
-longer. 
-
-
-One confusing aspect about the pivot, is its traversal. Even though the pivot's 
-location is set at one element, the comparison operation doesn't stop there; 
-two elements still may be compared before or after the pivot--again, this 
-depends on the implementation.
+It is designed such that for every iteration of the outer loop, the inner loop's 
+swap method is designed so that the gap between elements goes down by steps of a 
+_shrink factor_. In the algorithm shown here, arbitrary numbers were chosen, but 
+do note that the numbers are just mathematical logic to check whether the gap is 
+>= 1 which essentially shows how far apart the two elements being observed 
+are; a return of 1 means the elements are next to each other.The space 
+usage in the algorithm stays the same since the array's size isn't 
+being morphed.
 
 ###### Analysis
 _BCT_:
@@ -78,12 +76,8 @@ _WCS_:
   doesn't add to the call stack, thus leaving us with O(log(n)) as worst.
 
 ###### History
-Developed in 1959 by Tony Hoare while in the Soviet Union to enhance a machine 
-translation project for the National Physical Library. As a part of the 
-translation process, he needed to sort the words of Russian sentences 
-prior to looking them up in a Russian-English dictionary that was 
-already sorted in alphabetical order. After recognizing that his 
-first idea: insertion sort; was to slow, he came up with this.
+Developed by Włodzimierz Dobosiewicz in 1980 and later rediscovered by Stephen 
+Lacey and Richard Box in 1991.
 
 ###### Design
 Most standard implementations are based off Lomuto's partition scheme; however, 
