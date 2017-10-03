@@ -17,7 +17,7 @@ Current language implementations
 
 ![](./.res/fig.png)
 
-###### Structure 
+###### Structure ?> update this after your figure out structure again
 Within the top-level dir, exists: project license, readme, shell script, and
 the tutorial dir containing everything explained in the overview. The readme 
 license, and `clean.sh` are pretty self-explanatory; however, within the 

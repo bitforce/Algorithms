@@ -1,0 +1,12 @@
+================================================================================
+                                DEVELOPER NOTICE
+================================================================================
+> see if you can make global Makefile to work with both Python and Java
+
+> make global Makefile for Java
+> update clean.sh for other unnecessary files
+> use Processing to created animated sorting gifs
+> write algorithm code first and do README/tailoring last--learn smoother
+> when you are done, comb through everything b/c some titles are out of place
+> the MergeSort Makefile is the current standard for future and past Makefiles
+================================================================================

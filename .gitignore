@@ -1,7 +1,12 @@
-__pycache__
+########################################
+__pycache__/
+
 .ropeproject/
+
 .devnote.txt
 .DS_Store
+
+########################################
 *.class
 *.pyc
 *.swp
