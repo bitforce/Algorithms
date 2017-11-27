@@ -6,6 +6,7 @@ __pycache__/
 .devnote.txt
 .DS_Store
 .prune
+.todo
 
 *.class
 *.pyc
