@@ -93,6 +93,12 @@ but remove all unnecessary files and folders within the entire
 Algorithm's project directory; then you can simply run the 
 following command: `./clean.sh`
 
+Another, perhaps better option, is to install my (_shameless plug_) program: 
+[Pruner](https://github.com/bitforce/Pruner). This facilitates dealing with
+project garbage by swiftly deleting any files and folders throughout the 
+directory without having to write your own cleaning scripts or re-type 
+commands to rid the clutter.
+
 Note
 ---
 Tutorial directories are ones that contain README files explaining details
